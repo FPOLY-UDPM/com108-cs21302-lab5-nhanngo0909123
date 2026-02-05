@@ -1,6 +1,6 @@
 /******************************************************************************
- * Họ và tên: [ĐIỀN TÊN TẠI ĐÂY]
- * MSSV:      [ĐIỀN MSSV TẠI ĐÂY]
+ * Họ và tên: [Ngô Thanh Nhân]
+ * MSSV:      [PS49576]
  * Lớp:       [ĐIỀN LỚP TẠI ĐÂY]
  *****************************************************************************/
 
@@ -12,12 +12,30 @@
  
 #include <stdio.h>
 
-//Tạo hàm 
+// Hàm kiểm tra năm nhuận
+int namNhuan(int nam) {
+    if (nam % 400 == 0 || (nam % 4 == 0 && nam % 100 != 0)) {
+        return 1; // Là năm nhuận
+    }
+    return 0; // Không phải năm nhuận
+}
 
 int main() {
+    int nam;
 
-    // //Gọi hàm trong hàm main 
-    
+    printf("Nhap nam: ");
+    scanf("%d", &nam);
+
+    if (namNhuan(nam)) {
+        printf("%d la nam nhuan", nam);
+    } else {
+        printf("%d khong phai nam nhuan", nam);
+    }
+
     return 0;
 }
+
+
+         
+
 

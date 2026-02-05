@@ -11,19 +11,21 @@
 //  giá trị lớn nhất giữa 3 số 
 
 #include <stdio.h>
-
-// //Tạo hàm 
-// int tenHam(so1, so2, so3){ 
-// int max; 
-// //Cách giải để tìm ra số lớn nhất 
-// return max; 
-// } 
-
+int Max3(int a, int b, int c) {
+    int max = a;
+    if (b > max) max = b;
+    if (c > max) max = c;
+    printf("Số lớn nhất trong 3 số %d, %d, %d là: %d\n", a, b, c, max);
+    return max;
+}
 int main() {
-
-    // //Gọi hàm trong hàm main 
-    // //ví dụ 
-    // int soMax = temHam(3,5,10)
-    
+    int a, b, c;
+    printf("Nhập số thứ nhất: ");
+    scanf("%d", &a);
+    printf("Nhập số thứ hai: ");
+    scanf("%d", &b);
+    printf("Nhập số thứ ba: ");
+    scanf("%d", &c);
+    Max3(a, b, c);
     return 0;
 }
